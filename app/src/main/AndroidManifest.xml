@@ -7,12 +7,17 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pathfinderapp">
-        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".ShowmapActivity"></activity>
+        <activity android:name=".HowtoActivity" />
+        <activity android:name=".MapActivity" />
         <activity android:name=".SplashActivity">
+            android:screenOrientation="landscape"
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

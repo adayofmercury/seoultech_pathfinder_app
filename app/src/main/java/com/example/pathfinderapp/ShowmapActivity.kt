@@ -1,38 +1,18 @@
 package com.example.pathfinderapp
 
-import android.content.Intent
-import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.Toast
-import com.bumptech.glide.Glide
 import android.view.View
-import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
+class ShowmapActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_showmap)
+
         this.supportActionBar?.hide()
-        val imageView : ImageView = findViewById(R.id.gifview)
-        Glide.with(this).load(R.raw.maingif).into(imageView)
-
-        val start : ImageView = findViewById(R.id.start)
-
-        start.setOnClickListener{
-            val intent = Intent(this, MapActivity::class.java)
-            startActivity((intent))
-        }
-
-        val howto : TextView = findViewById(R.id.howto)
-
-        howto.setOnClickListener{
-            val intent = Intent(this, HowtoActivity::class.java)
-            startActivity((intent))
-        }
 
     }
+
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
         if (hasFocus) hideSystemUI()
@@ -61,6 +41,3 @@ class MainActivity : AppCompatActivity() {
                 or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
     }
 }
-
-
-

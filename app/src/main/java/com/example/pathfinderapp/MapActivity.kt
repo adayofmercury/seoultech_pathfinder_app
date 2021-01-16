@@ -9,7 +9,6 @@ class MapActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.supportActionBar?.hide()
-        setRequestedOrientation(SCREEN_ORIENTATION_LANDSCAPE);
 
         setContentView(R.layout.activity_map)
 

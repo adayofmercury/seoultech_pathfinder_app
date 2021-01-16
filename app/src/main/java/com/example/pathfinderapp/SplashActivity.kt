@@ -1,6 +1,7 @@
 package com.example.pathfinderapp
 
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.coroutines.CoroutineScope
@@ -14,12 +15,13 @@ class SplashActivity : AppCompatActivity() {
     private val time: Long = 1500
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash2)
         this.supportActionBar?.hide()
         CoroutineScope(Dispatchers.IO).launch {
             delay(time)
-            val intent = Intent(applicationContext, MainActivity::class.java)
+            val intent = Intent(applicationContext, ShowmapActivity::class.java)
             startActivity(intent)
             finish()
         }
