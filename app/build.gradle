@@ -52,5 +52,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.0'
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    //Add LakuePopupActivity Library
+    implementation 'com.github.lakue119:LakuePopupActivity:1.0.1'
 
 }

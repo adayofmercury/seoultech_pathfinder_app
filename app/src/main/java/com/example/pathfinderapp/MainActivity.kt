@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val start : ImageView = findViewById(R.id.start)
 
         start.setOnClickListener{
-            val intent = Intent(this, MapActivity::class.java)
+            val intent = Intent(this, ShowmapActivity::class.java)
             startActivity((intent))
         }
 

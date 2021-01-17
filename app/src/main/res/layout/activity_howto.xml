@@ -4,22 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HowtoActivity">
+    tools:context=".HowtoActivity"
+    android:background="@color/colorWhite">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/yesbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/yes" />
+
+            <ImageView
+                android:id="@+id/nobutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/no" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/yes22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/haveyou"
+            android:layout_marginLeft="30dp"/>
+
+    </LinearLayout>
 
     <ImageView
-        android:id="@+id/nohave"
-        android:layout_width="107dp"
-        android:layout_height="343dp"
+        android:id="@+id/nonvr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/novr" />
-
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/nonvr"
+        android:visibility="invisible"
+        />
     <ImageView
-        android:id="@+id/have"
-        android:layout_width="125dp"
-        android:layout_height="387dp"
+        android:id="@+id/yesvr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nohave"
-        app:srcCompat="@drawable/yesvr" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/yesvr"
+        android:visibility="invisible"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

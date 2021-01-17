@@ -14,7 +14,6 @@
         <activity android:name=".HowtoActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".SplashActivity">
-            android:screenOrientation="landscape"
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
