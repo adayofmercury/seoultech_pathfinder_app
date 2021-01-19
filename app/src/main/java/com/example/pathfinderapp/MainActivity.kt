@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         this.supportActionBar?.hide()
         val imageView : ImageView = findViewById(R.id.gifview)
-        Glide.with(this).load(R.raw.maingif).into(imageView)
+        Glide.with(this).load(R.raw.main2).into(imageView)
 
         val start : ImageView = findViewById(R.id.start)
 

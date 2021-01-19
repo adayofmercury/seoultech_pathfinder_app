@@ -1,8 +1,10 @@
 package com.example.pathfinderapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 
 class ShowmapActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -10,6 +12,13 @@ class ShowmapActivity : AppCompatActivity() {
         setContentView(R.layout.activity_showmap)
 
         this.supportActionBar?.hide()
+
+        val course1 : ImageView = findViewById(R.id.course1)
+
+        course1.setOnClickListener {
+            val intent = Intent(this, MapActivity::class.java)
+            startActivity((intent))
+        }
 
     }
 

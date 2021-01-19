@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
+import android.widget.Button
 import android.widget.ImageView
 import androidx.core.view.isVisible
 
@@ -20,20 +21,107 @@ class HowtoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_howto)
         this.supportActionBar?.hide()
 
-        val yesbutton : (ImageView) = findViewById(R.id.yesbutton)
-        val nobutton : (ImageView) = findViewById(R.id.nobutton)
-
-        val yesvr : (ImageView) = findViewById(R.id.yesvr)
-        val nonvr : (ImageView) = findViewById(R.id.nonvr)
+        val prev : (Button) = findViewById(R.id.prev)
+        val next : (Button) = findViewById(R.id.next)
+        val togglekoreng : (Button) = findViewById(R.id.togglekoreng)
 
 
-        yesbutton.setOnClickListener {
-            yesvr.visibility = View.VISIBLE
+        val backbtn : (ImageView) = findViewById(R.id.backBtn)
+
+        val kor1 : (ImageView) = findViewById(R.id.kor1)
+        val kor2 : (ImageView) = findViewById(R.id.kor2)
+        val kor3 : (ImageView) = findViewById(R.id.kor3)
+
+        val eng1 : (ImageView) = findViewById(R.id.eng1)
+        val eng2 : (ImageView) = findViewById(R.id.eng2)
+        val eng3 : (ImageView) = findViewById(R.id.eng3)
+
+        prev.visibility = View.INVISIBLE
+
+        backbtn.setOnClickListener {
+            finish()
         }
 
-        nobutton.setOnClickListener{
-            nonvr.visibility = View.VISIBLE
+        next.setOnClickListener {
+            if (kor1.visibility == View.VISIBLE) {
+                kor1.visibility = View.INVISIBLE
+                kor2.visibility = View.VISIBLE
+                prev.visibility = View.VISIBLE
+            }
+            else if (kor2.visibility == View.VISIBLE) {
+                kor2.visibility = View.INVISIBLE
+                kor3.visibility = View.VISIBLE
+                next.visibility = View.INVISIBLE
+            }
+
+            else if (eng1.visibility == View.VISIBLE) {
+                eng1.visibility = View.INVISIBLE
+                eng2.visibility = View.VISIBLE
+                prev.visibility = View.VISIBLE
+            }
+            else if (eng2.visibility == View.VISIBLE) {
+                eng2.visibility = View.INVISIBLE
+                eng3.visibility = View.VISIBLE
+                next.visibility = View.INVISIBLE
+            }
+
         }
+
+        prev.setOnClickListener {
+            if (kor2.visibility == View.VISIBLE) {
+                kor2.visibility = View.INVISIBLE
+                kor1.visibility = View.VISIBLE
+                prev.visibility = View.INVISIBLE
+            }
+            else if (kor3.visibility == View.VISIBLE) {
+                kor3.visibility = View.INVISIBLE
+                kor2.visibility = View.VISIBLE
+                next.visibility = View.VISIBLE
+            }
+            else if (eng2.visibility == View.VISIBLE) {
+                eng2.visibility = View.INVISIBLE
+                eng1.visibility = View.VISIBLE
+                prev.visibility = View.INVISIBLE
+            }
+            else if (eng3.visibility == View.VISIBLE) {
+                eng3.visibility = View.INVISIBLE
+                eng2.visibility = View.VISIBLE
+                next.visibility = View.VISIBLE
+            }
+        }
+
+        togglekoreng.setOnClickListener {
+            if (kor1.visibility == View.VISIBLE) {
+                kor1.visibility = View.INVISIBLE
+                eng1.visibility = View.VISIBLE
+            }
+
+            else if (kor2.visibility == View.VISIBLE) {
+                kor2.visibility = View.INVISIBLE
+                eng2.visibility = View.VISIBLE
+            }
+
+            else if (kor3.visibility == View.VISIBLE) {
+                kor3.visibility = View.INVISIBLE
+                eng3.visibility = View.VISIBLE
+            }
+
+            else if (eng1.visibility == View.VISIBLE) {
+                eng1.visibility = View.INVISIBLE
+                kor1.visibility = View.VISIBLE
+            }
+
+            else if (eng2.visibility == View.VISIBLE) {
+                eng2.visibility = View.INVISIBLE
+                kor2.visibility = View.VISIBLE
+            }
+
+            else if (eng3.visibility == View.VISIBLE) {
+                eng3.visibility = View.INVISIBLE
+                kor3.visibility = View.VISIBLE
+            }
+        }
+
 
         }
 
