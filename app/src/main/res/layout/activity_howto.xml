@@ -73,45 +73,50 @@
         app:srcCompat="@drawable/eng3"
         android:visibility="invisible"/>
 
-    <Button
+    <ImageView
         android:id="@+id/prev"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/prev"
+        android:rotation="90"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginTop="32dp"
-        android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageView
         android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/next"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginBottom="32dp"
-        android:text="Button"
+        android:rotation="90"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <ImageView
         android:id="@+id/togglekoreng"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_width="32dp"
+        android:layout_height="93dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/koreng" />
 
     <ImageView
         android:id="@+id/backBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:background="@color/black"
         android:rotation="90"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/abc_vector_test" />
+        app:srcCompat="@drawable/backbtn" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

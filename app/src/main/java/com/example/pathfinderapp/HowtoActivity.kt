@@ -21,9 +21,9 @@ class HowtoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_howto)
         this.supportActionBar?.hide()
 
-        val prev : (Button) = findViewById(R.id.prev)
-        val next : (Button) = findViewById(R.id.next)
-        val togglekoreng : (Button) = findViewById(R.id.togglekoreng)
+        val prev : (ImageView) = findViewById(R.id.prev)
+        val next : (ImageView) = findViewById(R.id.next)
+        val togglekoreng : (ImageView) = findViewById(R.id.togglekoreng)
 
 
         val backbtn : (ImageView) = findViewById(R.id.backBtn)
