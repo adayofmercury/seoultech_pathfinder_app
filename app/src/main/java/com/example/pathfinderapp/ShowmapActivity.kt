@@ -14,12 +14,41 @@ class ShowmapActivity : AppCompatActivity() {
         this.supportActionBar?.hide()
 
         val course1 : ImageView = findViewById(R.id.course1)
+        val course2 : ImageView = findViewById(R.id.course2)
+        val course3 : ImageView = findViewById(R.id.course3)
+        val course4 : ImageView = findViewById(R.id.course4)
+        val course5 : ImageView = findViewById(R.id.course5)
+        val course6 : ImageView = findViewById(R.id.course6)
+        val course7 : ImageView = findViewById(R.id.course7)
 
         course1.setOnClickListener {
-            val intent = Intent(this, MapActivity::class.java)
+            val intent = Intent(this, Course1Activity::class.java)
             startActivity((intent))
         }
-
+        course2.setOnClickListener {
+            val intent = Intent(this, Course2Activity::class.java)
+            startActivity((intent))
+        }
+        course3.setOnClickListener {
+            val intent = Intent(this, Course3Activity::class.java)
+            startActivity((intent))
+        }
+        course4.setOnClickListener {
+            val intent = Intent(this, Course4Activity::class.java)
+            startActivity((intent))
+        }
+        course5.setOnClickListener {
+            val intent = Intent(this, Course5Activity::class.java)
+            startActivity((intent))
+        }
+        course6.setOnClickListener {
+            val intent = Intent(this, Course6Activity::class.java)
+            startActivity((intent))
+        }
+        course7.setOnClickListener {
+            val intent = Intent(this, Course7Activity::class.java)
+            startActivity((intent))
+        }
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {

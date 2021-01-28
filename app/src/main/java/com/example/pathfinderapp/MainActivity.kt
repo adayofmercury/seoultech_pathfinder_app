@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         this.supportActionBar?.hide()
         val imageView : ImageView = findViewById(R.id.gifview)
-        Glide.with(this).load(R.raw.main2).into(imageView)
+        Glide.with(this).load(R.raw.main).into(imageView)
 
         val start : ImageView = findViewById(R.id.start)
 
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             startActivity((intent))
         }
 
-        val howto : TextView = findViewById(R.id.howto)
+        val howto : ImageView = findViewById(R.id.howto)
 
         howto.setOnClickListener{
             val intent = Intent(this, HowtoActivity::class.java)

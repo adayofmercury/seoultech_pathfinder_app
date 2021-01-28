@@ -10,7 +10,14 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pathfinderapp">
-        <activity android:name=".ShowmapActivity"></activity>
+        <activity android:name=".Course7Activity"></activity>
+        <activity android:name=".Course6Activity" />
+        <activity android:name=".Course5Activity" />
+        <activity android:name=".Course4Activity" />
+        <activity android:name=".Course3Activity" />
+        <activity android:name=".Course2Activity" />
+        <activity android:name=".Course1Activity" />
+        <activity android:name=".ShowmapActivity" />
         <activity android:name=".HowtoActivity" />
         <activity android:name=".MapActivity" />
         <activity android:name=".SplashActivity">
